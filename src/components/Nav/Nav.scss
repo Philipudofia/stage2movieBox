@@ -63,8 +63,8 @@
         }
         .searchContainer{
             // display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
+            align-items: center;
+            justify-content: center;
             position: absolute;
             flex-direction: column;
             top: 60px;
@@ -74,9 +74,13 @@
             overflow-y: scroll;
             background-color: white;
             padding: 1rem;
-            .loader{
-                font-size: 2rem;
-                color: red;
+            .error{
+                font-family: 'Poppins', sans-serif;
+                color: rgb(219, 19, 19);
+                position: absolute;
+                top: 50%;
+                left: 30%;
+                font-weight: bolder;
             }
             .searchCard{
                 display: flex;

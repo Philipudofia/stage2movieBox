@@ -1,13 +1,13 @@
 import './Nav.css';
 import React from 'react';
+import ReactLoading from "react-loading";
 function Nav (){
 
     const [query, setQuery] =  React.useState('')
     const [searching, setSearching]= React.useState(false)
-    const [error, setError]= React.useState(false)
-    const [errorData, setErrorData]= React.useState('')
+    const [errorData, setErrorData]= React.useState()
     const [searched, setSearched] = React.useState()
-    const [pending, setPending] = React.useState(true)
+   
     const options = {
         method: 'GET',
         headers: {
@@ -20,13 +20,10 @@ function Nav (){
         fetch(`https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=en-US&page=1`, options)
         .then(res => res.json())
         .then(data=> {
-            setSearched(data.results); 
-            setPending(false);
+            setSearched(data.results);
         })
         .catch(err =>{
-            setError(true);
-            setErrorData(err.message)
-            console.error(err.message);
+            setErrorData("Sorry couldn't get data, check your network connection")
         } ); 
         },[query])
     
@@ -44,9 +41,9 @@ function Nav (){
                     <i className="fa-solid fa-magnifying-glass"></i>
                 </form>
                 <div className="searchContainer" style={searching? {display:'flex'}:{display:'none'}}>
-                    {pending?<p className='loader'>Loading..</p>:'' }
-                    {searched?.length == 0 & !pending ?<p className='loader'>Sorry we could not get any matches</p>:'' }
-                    {error&& <p>{errorData}</p>}
+                    {searched?<ReactLoading type="balls" color="#0000FF"
+                height={100} width={50} />:'' }
+                {errorData?<p className='error'>{errorData}</p>:''}
                     {searched?.map((e)=>{
                         return                     <div className='searchCard'>
                             <div className="poster">

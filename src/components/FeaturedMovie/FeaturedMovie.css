@@ -68,6 +68,20 @@
       grid-template-columns: repeat(4, 25%);
 }
 
+.featuredMovies .cards a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.featuredMovies .cards .error {
+  font-family: 'Poppins', sans-serif;
+  color: #db1313;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  font-weight: bolder;
+}
+
 .featuredMovies .cards .cardContainer {
   min-height: 18rem;
   padding-bottom: 1rem;

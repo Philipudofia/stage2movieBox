@@ -1,10 +1,13 @@
 import './LandingPage.css'
+import ReactLoading from "react-loading";
 
 function LandingPage(props){
     return(
         <div className='landingPage'>
             <div className="landingContainer">
-                {props.array?'':<p className='loader'>Loading..</p> }
+            {props.array?'':<ReactLoading type="spin" color="#0000FF"
+                height={100} width={50} position="absolute" left="50%" /> }
+                {props.error?<p className='error'>{props.error}</p>:''}
                 <div className="info">
                     <h1 className="movieName">{props.original_title} </h1>
                     <div className="rating">

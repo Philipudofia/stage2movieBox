@@ -30,6 +30,15 @@
   z-index: 5;
 }
 
+.landingPage .landingContainer .error {
+  font-family: 'Poppins', sans-serif;
+  color: #db1313;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  font-weight: bolder;
+}
+
 .landingPage .landingContainer .info {
   height: 100%;
   display: -webkit-box;
