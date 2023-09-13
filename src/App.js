@@ -5,6 +5,7 @@ import LandingPage from './components/LandingPage/LandingPage'
 import FeaturedMovie from "./components/FeaturedMovie/FeaturedMovie"
 import MovieDetails from './Page/MovieDetailsPage/MovieDetails';
 import Footer from './components/Footer/Footer'
+import ErrorPage from './ErrorPage'
 import {Routes, Route, BrowserRouter} from "react-router-dom"
 
 function App() {
@@ -28,10 +29,9 @@ function App() {
           }
       }
   return(
-        <div>
+        <BrowserRouter>
           <Routes>
-              <Route path='/:id' element={<MovieDetails/>} />
-              <Route index path='/' element={<React.Fragment><Nav />
+          <Route  path='/' element={<React.Fragment><Nav />
               <LandingPage 
                 array={movieData}
                 original_title={movieData?.[countlandingpage].original_title}
@@ -46,8 +46,10 @@ function App() {
                 clickedMovieDetails={e => setClickedMovie(e)}
               />
               <Footer /></React.Fragment>}/>
+              <Route path='/movie/:id' element={<MovieDetails/>} />
+              <Route path='*' element={<ErrorPage/>}/>
             </Routes>
-        </div>
+        </BrowserRouter>
   )
 }
 

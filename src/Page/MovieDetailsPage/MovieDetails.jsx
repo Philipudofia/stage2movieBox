@@ -17,9 +17,8 @@ function MovieDetails() {
       React.useEffect(()=>{
         fetch(`https://api.themoviedb.org/3/movie/${id}`, options)
         .then(res => res.json())
-        .then(data=> {setClickedMovie(data); console.log(data)})
+        .then(data=> {setClickedMovie(data)})
     },[id]);
-    console.log(id)
     return(
         <div>
             <div className="movieDetailsContainer">
