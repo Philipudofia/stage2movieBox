@@ -1,0 +1,176 @@
+*{
+    padding: none;
+    box-sizing: border-box;
+}
+.navbar{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: none;
+    position: fixed;
+    z-index: 10;
+    .navbarContainer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        z-index: 10;
+        width: 80%;
+        .logo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i{
+                height: 2.8rem;
+                width: 2.8rem;
+                border-radius: 50%;
+                background-color: rgb(246, 25, 25);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color:white;
+                margin-right: 1rem;
+            }
+        }
+        .search{
+            min-width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            height: 2.5rem;
+            width: auto;
+            border: 2px solid rgba(17, 9, 9,.6);
+            padding: .5rem;
+            border-radius: .4rem;
+            input{
+                height: 2rem;
+                background: none;
+                border: none;
+                outline: none;
+                padding: .4rem;
+                font-size: 1rem;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                width: 90%;
+            }
+            // i{
+            //     position: absolute;
+            //     left: 70%;
+            //     cursor: pointer;
+            // }
+        }
+        .searchContainer{
+            // display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            position: absolute;
+            flex-direction: column;
+            top: 60px;
+            left: 32%;
+            height: 60vh;
+            width: 40%;
+            overflow-y: scroll;
+            background-color: white;
+            padding: 1rem;
+            .loader{
+                font-size: 2rem;
+                color: red;
+            }
+            .searchCard{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                margin-bottom: 1rem;
+                border-bottom: 2px solid rgb(246, 25, 25);
+                width: 100%;
+                cursor: pointer;
+                .poster{
+                    height: 7rem;
+                    width: 7rem;
+                    padding-right: 1rem;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+        .signIn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i{
+                height: 2rem;
+                width: 2rem;
+                border-radius: 50%;
+                background-color: rgb(246, 25, 25);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color:white;
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .navbar{
+        .navbarContainer{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+            z-index: 10;
+            width: 90%;
+            .logo{
+                min-width: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                h2{
+                    font-size: .8rem;
+                }
+                i{
+                    height: 1.8rem;
+                    width: 1.8rem;
+                    margin-right: .2rem;
+                    font-size: .7rem;
+                }
+            }
+            .search{
+                min-width: none;
+                width: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                height: 1.2rem;
+                width: auto;
+                border: 2px solid rgba(17, 9, 9,.6);
+                padding: .2rem;
+                border-radius: .4rem;
+                input{
+                    height: 1.2rem;
+                    background: none;
+                    border: none;
+                    outline: none;
+                    padding: .2rem;
+                    font-size: .7rem;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    width: 90%;
+                }
+                i{
+                    font-size: .7rem;
+                }
+            }
+            .signIn{
+                display: none;
+            }
+        }
+    }
+}

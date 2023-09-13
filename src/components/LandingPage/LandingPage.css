@@ -1,0 +1,134 @@
+.landingPage {
+  width: 100%;
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.landingPage .landingContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 80%;
+  color: white;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+}
+
+.landingPage .landingContainer .info {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Quicksand", sans-serif;
+}
+
+.landingPage .landingContainer .info .movieName {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.landingPage .landingContainer .info .rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1rem;
+}
+
+.landingPage .landingContainer .info .rating i {
+  color: gold;
+}
+
+.landingPage .landingContainer .info .rating p {
+  font-size: 1rem;
+  margin-left: .5rem;
+}
+
+.landingPage .landingContainer .info .about {
+  font-size: 1.2rem;
+  width: 50%;
+}
+
+.landingPage .landingContainer .info .watchTrailer {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 3rem;
+  width: 9rem;
+  background-color: #f61919;
+  border-radius: .5rem;
+  color: white;
+}
+
+.landingPage img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 900px) {
+  .landingPage .landingContainer .info .movieName {
+    font-size: 1.7rem;
+    font-weight: bolder;
+  }
+  .landingPage .landingContainer .info .rating {
+    font-weight: bolder;
+  }
+  .landingPage .landingContainer .info .about {
+    font-size: .9rem;
+    font-weight: bolder;
+  }
+  .landingPage .landingContainer .info .watchTrailer {
+    height: 2rem;
+    width: 6rem;
+    background-color: #f61919;
+    border-radius: .5rem;
+    color: white;
+    font-size: .7rem;
+  }
+}
+/*# sourceMappingURL=LandingPage.css.map */

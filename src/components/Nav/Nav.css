@@ -1,0 +1,260 @@
+* {
+  padding: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.navbar {
+  height: 60px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: none;
+  position: fixed;
+  z-index: 10;
+}
+
+.navbar .navbarContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 60px;
+  z-index: 10;
+  width: 80%;
+}
+
+.navbar .navbarContainer .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar .navbarContainer .logo i {
+  height: 2.8rem;
+  width: 2.8rem;
+  border-radius: 50%;
+  background-color: #f61919;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  margin-right: 1rem;
+}
+
+.navbar .navbarContainer .search {
+  min-width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  height: 2.5rem;
+  width: auto;
+  border: 2px solid rgba(17, 9, 9, 0.6);
+  padding: .5rem;
+  border-radius: .4rem;
+}
+
+.navbar .navbarContainer .search input {
+  height: 2rem;
+  background: none;
+  border: none;
+  outline: none;
+  padding: .4rem;
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 90%;
+}
+
+.navbar .navbarContainer .searchContainer {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 60px;
+  left: 32%;
+  height: 60vh;
+  width: 40%;
+  overflow-y: scroll;
+  background-color: white;
+  padding: 1rem;
+}
+
+.navbar .navbarContainer .searchContainer .loader {
+  font-size: 2rem;
+  color: red;
+}
+
+.navbar .navbarContainer .searchContainer .searchCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #f61919;
+  width: 100%;
+  cursor: pointer;
+}
+
+.navbar .navbarContainer .searchContainer .searchCard .poster {
+  height: 7rem;
+  width: 7rem;
+  padding-right: 1rem;
+}
+
+.navbar .navbarContainer .searchContainer .searchCard .poster img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.navbar .navbarContainer .signIn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar .navbarContainer .signIn i {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: #f61919;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 900px) {
+  .navbar .navbarContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 60px;
+    z-index: 10;
+    width: 90%;
+  }
+  .navbar .navbarContainer .logo {
+    min-width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .navbar .navbarContainer .logo h2 {
+    font-size: .8rem;
+  }
+  .navbar .navbarContainer .logo i {
+    height: 1.8rem;
+    width: 1.8rem;
+    margin-right: .2rem;
+    font-size: .7rem;
+  }
+  .navbar .navbarContainer .search {
+    min-width: none;
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
+    height: 1.2rem;
+    width: auto;
+    border: 2px solid rgba(17, 9, 9, 0.6);
+    padding: .2rem;
+    border-radius: .4rem;
+  }
+  .navbar .navbarContainer .search input {
+    height: 1.2rem;
+    background: none;
+    border: none;
+    outline: none;
+    padding: .2rem;
+    font-size: .7rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 90%;
+  }
+  .navbar .navbarContainer .search i {
+    font-size: .7rem;
+  }
+  .navbar .navbarContainer .signIn {
+    display: none;
+  }
+}
+/*# sourceMappingURL=Nav.css.map */

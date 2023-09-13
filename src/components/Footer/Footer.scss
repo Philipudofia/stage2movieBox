@@ -1,0 +1,50 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 8rem;
+    .socialMedia{
+        display: flex;
+        width: 20%;
+        font-size: 1.5rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .terms{
+        display: flex;
+        width: 30%;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.2rem;
+    }
+    .copyright{
+        display: flex;
+        font-size: 1rem;
+        width: 18%;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width:900px){
+    .footer{
+        .socialMedia{
+            width: 35%;
+        }
+        .terms{
+            display: flex;
+            width:80%;
+            align-items: center;
+            justify-content: space-between;
+            font-size:.8rem;
+        }
+        .copyright{
+            display: flex;
+            font-size: 1rem;
+            width: 70%;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
