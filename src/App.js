@@ -28,11 +28,10 @@ function App() {
           }
       }
   return(
-      <div>
         <Routes>
               <Route path='stage2movieBox/:id' element={<MovieDetails/>} />
-            </Routes>
-            <Nav />
+              <Route index path='stage2movieBox' element={<div>
+              <Nav />
               <LandingPage 
                 array={movieData}
                 original_title={movieData?.[countlandingpage].original_title}
@@ -47,7 +46,8 @@ function App() {
                 clickedMovieDetails={e => setClickedMovie(e)}
               />
               <Footer />
-      </div>
+                  </div>}/>
+            </Routes>
   )
 }
 
