@@ -30,7 +30,7 @@ function App() {
   return(
         <div>
           <Routes>
-              <Route path='stage2movieBox/:id' element={<MovieDetails/>} />
+              <Route path='/:id' element={<MovieDetails/>} />
               <Route index path='/' element={<React.Fragment><Nav />
               <LandingPage 
                 array={movieData}
