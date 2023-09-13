@@ -5,7 +5,7 @@ import LandingPage from './components/LandingPage/LandingPage'
 import FeaturedMovie from "./components/FeaturedMovie/FeaturedMovie"
 import MovieDetails from './Page/MovieDetailsPage/MovieDetails';
 import Footer from './components/Footer/Footer'
-import {Routes, Route} from "react-router-dom"
+import {Routes, Route, BrowserRouter} from "react-router-dom"
 
 function App() {
   const [movieData,setMovieData]= React.useState()
@@ -29,26 +29,29 @@ function App() {
       }
   return(
       <div>
-            <Routes>
-                <Route path='stage2movieBox/:id' element={<MovieDetails/>} />
-                <Route path='stage2movieBox' element={<div>
-                  <Nav />
-                  <LandingPage 
-            array={movieData}
-            original_title={movieData?.[countlandingpage].original_title}
-            vote_average={movieData?.[countlandingpage].vote_average}
-            overview={movieData?.[countlandingpage].overview}
-            poster_path={movieData?.[countlandingpage].poster_path}
-            error={errorData}
-            />
-            <FeaturedMovie 
-            array={movieData}
-            error={errorData}
-            clickedMovieDetails={e => setClickedMovie(e)}
-            />
-            <Footer />
-                </div>}/>
+        <Routes>
+              <Route path='stage2movieBox/:id' element={<MovieDetails/>} />
+              <Route path='stage2movieBox' element={<div>
+              <Nav />
+              <LandingPage 
+                array={movieData}
+                original_title={movieData?.[countlandingpage].original_title}
+                vote_average={movieData?.[countlandingpage].vote_average}
+                overview={movieData?.[countlandingpage].overview}
+                poster_path={movieData?.[countlandingpage].poster_path}
+                error={errorData}
+              />
+              <FeaturedMovie 
+                array={movieData}
+                error={errorData}
+                clickedMovieDetails={e => setClickedMovie(e)}
+              />
+              <Footer />
+                  </div>}/>
             </Routes>
+        {/* <BrowserRouter>
+          
+        </BrowserRouter> */}
       </div>
   )
 }
