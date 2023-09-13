@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/stage2movieBox/static/css/main.61017022.css",
+    "main.js": "/stage2movieBox/static/js/main.fd638633.js",
+    "index.html": "/stage2movieBox/index.html",
+    "main.61017022.css.map": "/stage2movieBox/static/css/main.61017022.css.map",
+    "main.fd638633.js.map": "/stage2movieBox/static/js/main.fd638633.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.61017022.css",
+    "static/js/main.fd638633.js"
+  ]
+}
