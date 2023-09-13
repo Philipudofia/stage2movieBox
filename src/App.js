@@ -16,7 +16,7 @@ function App() {
     React.useEffect(() => {
           fetch('https://api.themoviedb.org/3/trending/movie/day?language=en-US', options)
           .then(res => res.json())
-          .then(data =>  {setMovieData(data.results.slice(0,10));})
+          .then(data =>  setMovieData(data.results.slice(0,10)))
           .catch(err => {console.error(err); setErrorData(e=> "Sorry couldn't get data, check your network connection")});
       }, [])
           
