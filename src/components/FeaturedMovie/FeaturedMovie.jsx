@@ -24,13 +24,10 @@ function FeaturedMovie (props){
                     </p>
                 </div>
                 <div className="cards">
-                    {/* display the loading indicator when there is no error and data isn't gotten from the api yet */}
-                    {props.array ? '':<ReactLoading type="balls" color="#0000FF"
-                height={100} width={50} /> }  
-                {/* display error on failure to fetch data from api */}
-                {props.error?<p className='error'>{props.error}</p>:''}
-                {/* mapping out each movie and passing their data into my card container */}
-                    {   props.array?.map((e)=>{
+                {/* display error on failure to fetch data from api if not display data */}
+                {props.error?<p className='error'>{props.error}</p>:<React.Fragment>
+                {   props.array?.map((e)=>{
+                    {/* mapping out each movie and passing their data into my card container */}
                     return <div className='cardContainer' data-testid='movie-card' id={e.id}   key={e.id}>
                         
                         <div className="poster" >
@@ -44,6 +41,8 @@ function FeaturedMovie (props){
                         </div>
                         </div>        
                         } )}
+                    </React.Fragment>}
+                
                 </div>
             </div>
         </div>

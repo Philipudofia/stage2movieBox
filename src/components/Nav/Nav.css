@@ -97,24 +97,29 @@
 }
 
 .navbar .navbarContainer .searchContainer {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   position: absolute;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   top: 60px;
-  left: 32%;
-  height: 60vh;
+  left: 33%;
+  min-height: 2vh;
+  max-height: 40vh;
   width: 40%;
   overflow-y: scroll;
   background-color: white;
   padding: 1rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 .navbar .navbarContainer .searchContainer .error {
@@ -134,9 +139,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -153,8 +158,8 @@
 }
 
 .navbar .navbarContainer .searchContainer .searchCard .poster img {
-  height: 100%;
-  width: 100%;
+  height: 7rem;
+  width: 5rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -256,6 +261,39 @@
   }
   .navbar .navbarContainer .search i {
     font-size: .7rem;
+  }
+  .navbar .navbarContainer .searchContainer {
+    left: 50%;
+  }
+  .navbar .navbarContainer .searchContainer .searchCard {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-bottom: .4rem;
+    border-bottom: 2px solid #f61919;
+    width: 100%;
+    height: 4rem;
+    cursor: pointer;
+  }
+  .navbar .navbarContainer .searchContainer .searchCard .poster {
+    height: 4rem;
+    width: 4rem;
+    padding-right: 1rem;
+  }
+  .navbar .navbarContainer .searchContainer .searchCard .poster img {
+    height: 4rem;
+    width: 2.5rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .navbar .navbarContainer .searchContainer .searchCard .info {
+    font-size: 1rem;
+  }
+  .navbar .navbarContainer .searchContainer .searchCard .info .movieName {
+    font-size: .5rem;
+  }
+  .navbar .navbarContainer .searchContainer .searchCard .info .releasedate {
+    font-size: .3rem;
   }
   .navbar .navbarContainer .signIn {
     display: none;

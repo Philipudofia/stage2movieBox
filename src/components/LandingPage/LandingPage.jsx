@@ -1,10 +1,12 @@
+import React from 'react';
 import './LandingPage.css'
+
 
 function LandingPage(props){
     return(
         <div className='landingPage'>
+            {props.error?<p className='error'>{props.error}</p>:<React.Fragment>
             <div className="landingContainer">
-                {props.error?<p className='error'>{props.error}</p>:''}
                 <div className="info">
                     <h1 className="movieName">{props.original_title} </h1>
                     <div className="rating">
@@ -19,6 +21,7 @@ function LandingPage(props){
                 </div>
             </div>
             <img src={"https://www.themoviedb.org/t/p/original/"+props.poster_path} className='imageContainer' alt=""/>
+        </React.Fragment>}
         </div>
     )
 }

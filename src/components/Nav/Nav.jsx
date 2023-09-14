@@ -41,7 +41,7 @@ function Nav (){
                     <i className="fa-solid fa-magnifying-glass"></i>
                 </form>
                 <div className="searchContainer" style={searching? {display:'flex'}:{display:'none'}}>
-                    {searched?<ReactLoading type="balls" color="#0000FF"
+                    {searched== 0 && !errorData ?<ReactLoading type="balls" color="#0000FF"
                 height={100} width={50} />:'' }
                 {errorData?<p className='error'>{errorData}</p>:''}
                     {searched?.map((e)=>{
