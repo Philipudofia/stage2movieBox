@@ -171,6 +171,7 @@
           justify-content: center;
   width: 100%;
   font-family: 'Poppins', sans-serif;
+  height: auto;
 }
 
 .featuredMovies .cards .cardContainer .information h2 {
