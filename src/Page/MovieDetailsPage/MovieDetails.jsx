@@ -5,6 +5,7 @@ import {Link, useParams} from "react-router-dom"
 
 function MovieDetails() {
     const [clickedMovie, setClickedMovie] =  React.useState()
+    const [errorData, setErrorData] = React.useState('')
     const {id} = useParams();
     const options = {
         method: 'GET',
@@ -18,10 +19,11 @@ function MovieDetails() {
         fetch(`https://api.themoviedb.org/3/movie/${id}`, options)
         .then(res => res.json())
         .then(data=> {setClickedMovie(data)})
+        .catch(err => setErrorData(e=> "Sorry couldn't get data, check your network connection"));
     },[id]);
     return(
         <React.Fragment>
-            {clickedMovie?<div>
+            {errorData?<p className='error'>{errorData}</p>:<div>
             <div className="movieDetailsContainer">
                 <div className="sideBar">
                     <div className="logo">
@@ -59,7 +61,7 @@ function MovieDetails() {
                     </div>
                 </div>
             </div>
-        </div>:<p className='error'>"Sorry we couldn't get data, check your network connection"</p>}
+        </div>}
         </React.Fragment>
     )
 }

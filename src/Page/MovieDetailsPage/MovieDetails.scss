@@ -1,6 +1,14 @@
 *{
     margin: 0;
 }
+.error{
+    font-family: 'Poppins', sans-serif;
+    color: rgb(219, 19, 19);
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    font-weight: bolder;
+}
 .movieDetailsContainer{
     display: flex;
     flex-direction: row;
@@ -82,6 +90,21 @@
                 position: absolute;
                 align-items: center;
                 justify-content: center;
+                display: flex;
+                flex-direction: column;
+                color: white;
+                i{
+                    height: 4rem;
+                    width: 4rem;
+                    border-radius: 50%;
+                    background-color: gray;
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
+                }
+                p{
+                    font-size: 2rem;
+                }
             }
         }
         .title{
@@ -91,6 +114,58 @@
             width: 40%;
             flex-direction: row;
             height: auto;
+        }
+    }
+}
+@media screen and (max-width: 900px) {
+    .movieDetailsContainer{
+        .sideBar{
+            .logo{
+                width: 100%;
+                flex-direction: column;
+                i{
+                    height: 2.8rem;
+                    width: 2.8rem;
+                    border-radius: 50%;
+                    background-color: rgb(246, 25, 25);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color:white;
+                    margin-right: 1rem;
+                }
+            }
+            
+        }
+        .moviePage{
+            height: 100%;
+            width: 70%;
+            margin-right: 1rem;
+            .trailer{
+                height: 100%;
+                width: 100%;
+                img{
+                    height:50%;
+                    width: 100%;
+                }
+                .watchTrailer{
+                    position: absolute;
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
+                    flex-direction: column;
+                    color: white;
+                    p{
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+            .title{
+                display: flex;
+                align-items: flex-start;
+                justify-content:flex-start;
+                flex-direction: column;
+            }
         }
     }
 }

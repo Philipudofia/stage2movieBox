@@ -1,5 +1,4 @@
 import './LandingPage.css'
-import ReactLoading from "react-loading";
 
 function LandingPage(props){
     return(
