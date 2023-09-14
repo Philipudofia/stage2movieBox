@@ -29,7 +29,7 @@ function App() {
           }
       }
   return(
-        <BrowserRouter >
+        <HashRouter>
           <Routes>
           <Route exact path='/' element={<React.Fragment><Nav />
               <LandingPage 
@@ -49,7 +49,7 @@ function App() {
               <Route path='movies/:id' element={<MovieDetails/>} />
               <Route path='*' element={<ErrorPage/>}/>
             </Routes>
-        </BrowserRouter>
+          </HashRouter>
   )
 }
 
