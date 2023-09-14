@@ -6,7 +6,7 @@ import FeaturedMovie from "./components/FeaturedMovie/FeaturedMovie"
 import MovieDetails from './Page/MovieDetailsPage/MovieDetails';
 import Footer from './components/Footer/Footer'
 import ErrorPage from './ErrorPage'
-import {Routes, Route, BrowserRouter} from "react-router-dom"
+import {Routes, Route, BrowserRouter, HashRouter} from "react-router-dom"
 
 function App() {
   const [movieData,setMovieData]= React.useState()
@@ -29,7 +29,7 @@ function App() {
           }
       }
   return(
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
           <Route  path='/' element={<React.Fragment><Nav />
               <LandingPage 
@@ -46,10 +46,10 @@ function App() {
                 clickedMovieDetails={e => setClickedMovie(e)}
               />
               <Footer /></React.Fragment>}/>
-              <Route path='/movie/:id' element={<MovieDetails/>} />
+              <Route path='movies/:id' element={<MovieDetails/>} />
               <Route path='*' element={<ErrorPage/>}/>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
   )
 }
 

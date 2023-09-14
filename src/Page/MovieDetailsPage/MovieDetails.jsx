@@ -20,7 +20,8 @@ function MovieDetails() {
         .then(data=> {setClickedMovie(data)})
     },[id]);
     return(
-        <div>
+        <React.Fragment>
+            {clickedMovie?<div>
             <div className="movieDetailsContainer">
                 <div className="sideBar">
                     <div className="logo">
@@ -58,7 +59,8 @@ function MovieDetails() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div>:<p className='error'>"Sorry we couldn't get data, check your network connection"</p>}
+        </React.Fragment>
     )
 }
 
