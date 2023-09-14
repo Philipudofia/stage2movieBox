@@ -31,7 +31,7 @@ function App() {
   return(
         <BrowserRouter >
           <Routes>
-          <Route exact path='/stage2movieBox' element={<React.Fragment><Nav />
+          <Route exact path='/' element={<React.Fragment><Nav />
               <LandingPage 
                 array={movieData}
                 original_title={movieData?.[countlandingpage].original_title}
@@ -46,7 +46,7 @@ function App() {
                 clickedMovieDetails={e => setClickedMovie(e)}
               />
               <Footer /></React.Fragment>}/>
-              <Route path='stage2movieBox/movies/:id' element={<MovieDetails/>} />
+              <Route path='movies/:id' element={<MovieDetails/>} />
               <Route path='*' element={<ErrorPage/>}/>
             </Routes>
         </BrowserRouter>
