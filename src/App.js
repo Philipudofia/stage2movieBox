@@ -31,7 +31,7 @@ function App() {
   return(
         <HashRouter>
           <Routes>
-          <Route exact path='/' element={<React.Fragment><Nav />
+          <Route path='/' element={<React.Fragment><Nav />
               <LandingPage 
                 array={movieData}
                 original_title={movieData?.[countlandingpage].original_title}
