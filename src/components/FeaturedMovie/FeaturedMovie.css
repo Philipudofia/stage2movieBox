@@ -228,9 +228,9 @@
   .featuredMovies .cards .cardContainer .poster i {
     position: absolute;
     font-size: .6rem;
-    left: 70%;
-    height: 1.5rem;
-    width: 1.5rem;
+    left: 60%;
+    height: 1.2rem;
+    width: 1.2rem;
   }
   .featuredMovies .cards .cardContainer .information h2 {
     font-size: .7rem;
