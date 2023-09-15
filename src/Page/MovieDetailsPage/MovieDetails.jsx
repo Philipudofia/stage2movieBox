@@ -27,13 +27,15 @@ function MovieDetails() {
             <div className="movieDetailsContainer">
                 <div className="sideBar">
                     <div className="logo">
-                        <i className="fa-solid fa-tv"></i>
-                        <h2>
-                            MovieBox
-                        </h2>
+                    <img src={Logo} alt="" className="logoo" />
+                    <h2>
+                        MovieBox
+                    </h2>
                     </div>
-                    <p><a path='/stage2movieBox'>Home</a></p>
-                    <p className="movies">Movies</p>
+                    <p><i className="fa-solid fa-house"></i>Home</p>
+                    <p className="movies"><i className="fa-solid fa-clapperboard"></i>Movies</p>
+                    <p><i className="fa-solid fa-tv"></i>Tv Series</p>
+                    <p><i className="fa-solid fa-calender"></i>Upcoming</p>
                 </div>
                 <div className="moviePage">
                     <div className="trailer">
