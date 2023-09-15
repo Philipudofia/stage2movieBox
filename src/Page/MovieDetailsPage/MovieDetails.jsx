@@ -1,7 +1,7 @@
 import React from "react";
 import './MovieDetails.css'
 import {Link, useParams} from "react-router-dom"
-
+import Logo from './tv.png'
 
 function MovieDetails() {
     const [clickedMovie, setClickedMovie] =  React.useState()
@@ -35,7 +35,7 @@ function MovieDetails() {
                     <p><i className="fa-solid fa-house"></i>Home</p>
                     <p className="movies"><i className="fa-solid fa-clapperboard"></i>Movies</p>
                     <p><i className="fa-solid fa-tv"></i>Tv Series</p>
-                    <p><i className="fa-solid fa-calender"></i>Upcoming</p>
+                    <p><i className="fa fa-calendar"></i>Upcoming</p>
                 </div>
                 <div className="moviePage">
                     <div className="trailer">
