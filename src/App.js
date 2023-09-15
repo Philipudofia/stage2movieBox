@@ -45,7 +45,7 @@ function App() {
                 error={errorData}
               />
               <Footer /></React.Fragment>}/>
-              <Route path='/:id' element={<MovieDetails/>} /> 
+              <Route path='movies/:id' element={<MovieDetails/>} /> 
               <Route path='*' element={<ErrorPage/>}/>
             </Routes>
           </BrowserRouter>
