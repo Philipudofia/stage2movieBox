@@ -16,22 +16,26 @@
     .landingContainer{
         display: flex;
         align-items: center;
-        justify-content: flex-start;
-        width: 80%;
+        justify-content:flex-start;
+        width: 90%;
         color: white;
         height: 100%;
         position: absolute;
         z-index: 5;
         .info{
-            height: 100%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            justify-content: center;
+            justify-content: space-evenly;
+            height: auto;
+            min-height: 50vh;
             font-family:"Quicksand", sans-serif;
+            position: relative;
+            width: 100%;
             .movieName{
                 font-size: 2.8rem;
                 font-weight: bold;
+                font-family: Arial, Helvetica, sans-serif;
             }
             .rating{
                 display: flex;
@@ -54,7 +58,6 @@
             .watchTrailer{
                 cursor: pointer;
                 display: flex;
-                position: relative;
                 align-items: center;
                 justify-content: space-evenly;
                 height: 3rem;
@@ -75,6 +78,7 @@
     .landingPage{
         .landingContainer{
             .info{
+                min-height: 30vh;
                 .movieName{
                     font-size: 1.7rem;
                     font-weight: bolder;
@@ -83,8 +87,10 @@
                     font-weight: bolder;
                 }
                 .about{
-                    font-size:.9rem;
+                    width: 80%;
+                    font-size:.8rem;
                     font-weight: bolder;
+                    word-wrap: break-word;
                 }
                 .watchTrailer{
                     height: 2rem;
@@ -92,7 +98,7 @@
                     background-color: rgb(246, 25, 25);
                     border-radius: .5rem;
                     color: white;
-                    font-size: .7rem;
+                    font-size: .6rem;
                 }
             }
         }

@@ -6,19 +6,26 @@ import FeaturedMovie from "./components/FeaturedMovie/FeaturedMovie"
 import MovieDetails from './Page/MovieDetailsPage/MovieDetails';
 import Footer from './components/Footer/Footer'
 import ErrorPage from './ErrorPage'
-import {Routes, Route, BrowserRouter, HashRouter} from "react-router-dom"
+import {Routes, Route, BrowserRouter} from "react-router-dom"
 
 function App() {
   const [movieData,setMovieData]= React.useState()
   const [countlandingpage, setCountlandingpage] = React.useState(0)
-  const [clickedMovie, setClickedMovie] = React.useState()
   const [errorData, setErrorData] = React.useState('')
+  const [loading, setLoading] = React.useState(false);
   //fetching the trending movies from my tmdb api and slicing it to give only the top 10 
     React.useEffect(() => {
+          setLoading(true)
           fetch('https://api.themoviedb.org/3/trending/movie/day?language=en-US', options)
           .then(res => res.json())
-          .then(data =>  setMovieData(data.results.slice(0,10)))
-          .catch(err => {console.error(err); setErrorData(e=> "Sorry couldn't get data, check your network connection")});
+          .then(data =>  {
+            setMovieData(data.results.slice(0,10))
+            setLoading(false)
+          })
+          .catch(err => {
+            setErrorData(err.message)
+            setLoading(false)
+          });
       }, [])
           
       const options = {
@@ -32,21 +39,14 @@ function App() {
         <BrowserRouter>
           <Routes>
           <Route path='/' element={<React.Fragment><Nav />
-              <LandingPage 
-                array={movieData}
-                original_title={movieData?.[countlandingpage].original_title}
-                vote_average={movieData?.[countlandingpage].vote_average}
-                overview={movieData?.[countlandingpage].overview}
-                poster_path={movieData?.[countlandingpage].poster_path}
-                error={errorData}
-              />
+              <LandingPage/>
               <FeaturedMovie 
                 array={movieData}
                 error={errorData}
-                clickedMovieDetails={e => setClickedMovie(e)}
               />
               <Footer /></React.Fragment>}/>
               <Route path='movies/:id' element={<MovieDetails/>} />
+              {/* <Route path=':id' element={<MovieDetails/>} /> */}
               <Route path='*' element={<ErrorPage/>}/>
             </Routes>
           </BrowserRouter>

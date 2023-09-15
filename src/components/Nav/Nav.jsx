@@ -1,11 +1,14 @@
 import './Nav.css';
 import React from 'react';
 import ReactLoading from "react-loading";
+import Logo from './tv.png'
+
 function Nav (){
 
     const [query, setQuery] =  React.useState('')
     const [searching, setSearching]= React.useState(false)
-    const [errorData, setErrorData]= React.useState()
+    const [loading, setLoading] = React.useState(false);
+    const [errorData, setErrorData]= React.useState('')
     const [searched, setSearched] = React.useState()
    
     const options = {
@@ -17,21 +20,25 @@ function Nav (){
       };
       
       React.useEffect(()=>{
+        setLoading(true)
         fetch(`https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=en-US&page=1`, options)
         .then(res => res.json())
         .then(data=> {
-            setSearched(data.results);
+            setSearched(data.results)
+            setLoading(false)
         })
-        .catch(err =>{
-            setErrorData("Sorry couldn't get data, check your network connection")
-        } ); 
+        .catch(err => {
+            setErrorData(err.message)
+            setLoading(false)
+            console.log(err)
+        }); 
         },[query])
     
     return(
         <div className='navbar'>
             <div className="navbarContainer">
                 <div className="logo">
-                    <i className="fa-solid fa-tv"></i>
+                    <img src={Logo} alt="" className="logoo" />
                     <h2>
                         MovieBox
                     </h2>
@@ -41,11 +48,11 @@ function Nav (){
                     <i className="fa-solid fa-magnifying-glass"></i>
                 </form>
                 <div className="searchContainer" style={searching? {display:'flex'}:{display:'none'}}>
-                    {searched== 0 && !errorData ?<ReactLoading type="balls" color="#0000FF"
+                    {loading ?<ReactLoading type="balls" color="#0000FF"
                 height={100} width={50} />:'' }
                 {errorData?<p className='error'>{errorData}</p>:''}
                     {searched?.map((e)=>{
-                        return                     <div className='searchCard'>
+                        return                     <div className='searchCard' key={e.id}>
                             <div className="poster">
                                 <img src={"https://www.themoviedb.org/t/p/original/"+e.poster_path} alt=""/>
                             </div>

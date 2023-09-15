@@ -19,7 +19,7 @@ function MovieDetails() {
         fetch(`https://api.themoviedb.org/3/movie/${id}`, options)
         .then(res => res.json())
         .then(data=> {setClickedMovie(data)})
-        .catch(err => setErrorData(e=> "Sorry couldn't get data, check your network connection"));
+        .catch(err => setErrorData(err.message));
     },[id]);
     return(
         <React.Fragment>

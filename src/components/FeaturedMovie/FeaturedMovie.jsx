@@ -13,19 +13,20 @@ function FeaturedMovie (props){
         p.target.className=style
     }
     return(
-        <div className="cover">
-            <div className='featuredMovies'>
-                <div className="header">
-                    <h1>
-                        Popular Movies
-                    </h1>
-                    <p>
-                        See more <span><i className="fa-solid fa-greater-than"></i></span>
-                    </p>
-                </div>
-                <div className="cards">
+        <React.Fragment>
+
+{props.error?<p className='error'>{props.error} data , please try again later</p>: <div className="cover">
+        <div className='featuredMovies'>
+            <div className="header">
+                <h1>
+                    Popular Movies
+                </h1>
+                <p>
+                    See more <span><i className="fa-solid fa-greater-than"></i></span>
+                </p>
+            </div>
+            <div className="cards">
                 {/* display error on failure to fetch data from api if not display data */}
-                {props.error?<p className='error'>{props.error}</p>:<React.Fragment>
                 {   props.array?.map((e)=>{
                     {/* mapping out each movie and passing their data into my card container */}
                     return <div className='cardContainer' data-testid='movie-card' id={e.id}   key={e.id}>
@@ -39,13 +40,14 @@ function FeaturedMovie (props){
                                 <h2 className="movieTitle" data-testid='movie-title'>{e.original_title}</h2>
                                 <p className="releaseDate" data-testid='movie-release-date'>{e.release_date}</p>
                         </div>
-                        </div>        
-                        } )}
-                    </React.Fragment>}
-                
-                </div>
+                        </div> 
+                            
+                    } )}
             </div>
         </div>
+    </div>
+    }
+        </React.Fragment>
     )
 }
 
