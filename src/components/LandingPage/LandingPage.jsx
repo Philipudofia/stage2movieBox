@@ -25,7 +25,7 @@ function LandingPage(){
                     </div>
                 </div>
             </div>
-            <img src={Hero} className='imageContainer' alt=""/>
+            <img src={Hero} className='imageContainer' alt="john wick"/>
         </div>
     )
 }
