@@ -27,7 +27,7 @@ function MovieDetails() {
             <div className="movieDetailsContainer">
                 <div className="sideBar">
                     <div className="logo">
-                    <img src={Logo} alt="" className="logoo" />
+                    <img src={Logo} alt="logo" className="logoo" />
                     <h2>
                         MovieBox
                     </h2>
@@ -39,7 +39,7 @@ function MovieDetails() {
                 </div>
                 <div className="moviePage">
                     <div className="trailer">
-                        <img src={"https://www.themoviedb.org/t/p/original/"+clickedMovie?.poster_path} alt="" />
+                        <img src={"https://www.themoviedb.org/t/p/original/"+clickedMovie?.poster_path} alt="movie poster" />
                         <div className="watchTrailer">
                             <i className="fa-solid fa-circle-play"></i>
                             <p>Watch Trailer</p>
