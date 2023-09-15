@@ -30,7 +30,6 @@ function Nav (){
         .catch(err => {
             setErrorData(err.message)
             setLoading(false)
-            console.log(err)
         }); 
         },[query])
     
@@ -54,7 +53,7 @@ function Nav (){
                     {searched?.map((e)=>{
                         return                     <div className='searchCard' key={e.id}>
                             <div className="poster">
-                                <img src={"https://www.themoviedb.org/t/p/original/"+e.poster_path} alt=""/>
+                                <img src={"https://www.themoviedb.org/t/p/original/"+e.poster_path} alt="movie poster"/>
                             </div>
                             <div className="info"> 
                                 <div className="movieName">{e.title}</div>
