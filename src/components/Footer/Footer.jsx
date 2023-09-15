@@ -14,9 +14,8 @@ function Footer() {
                 <p> Privacy and Policy</p>
                 <p>Press Room</p>
             </div>
-            <div className="copyright">
-                <i className="fa-regular fa-copyright"></i>
-                <p> 2023 MovieBox By Philip Udofia</p>
+            <div className="copyright" </div>
+                <p> &copy; {new Date().getFullYear()} MovieBox By Philip Udofia</p>
             </div>
         </div>
     )
