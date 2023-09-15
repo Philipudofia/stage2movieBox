@@ -16,7 +16,7 @@ function App() {
   //fetching the trending movies from my tmdb api and slicing it to give only the top 10 
     React.useEffect(() => {
           setLoading(true)
-          fetch('https://api.themoviedb.org/3/trending/movie/day?language=en-US', options)
+          fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US', options)
           .then(res => res.json())
           .then(data =>  {
             setMovieData(data.results.slice(0,10))
