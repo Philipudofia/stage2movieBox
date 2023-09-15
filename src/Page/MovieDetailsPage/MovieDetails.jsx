@@ -47,7 +47,7 @@ function MovieDetails() {
                     </div>
                     <div className="title">
                         <div className="movieTitle">
-                            <h1 data-tesid="movieTitle">
+                            <h1 data-tesid="movie-title">
                                 {clickedMovie?.title}
                             </h1>
                         </div>
