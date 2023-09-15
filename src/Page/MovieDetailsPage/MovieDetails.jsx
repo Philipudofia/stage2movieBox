@@ -55,7 +55,7 @@ function MovieDetails() {
                             {clickedMovie?.release_date}
                         </p>
                         <p className="runtime" data-tesid="movie-runtime">
-                            {clickedMovie?.runtime}m
+                            {clickedMovie?.runtime}
                         </p>
                     </div>
                     <div className="overview"  data-tesid="movie-overview">
